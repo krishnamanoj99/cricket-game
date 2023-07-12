@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{% static 'game/images/cricket-website-favicon-black.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'game/styles.css' %}">
+    <script src="{% static 'game/script.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Over!</title>
+</head>
+<body class="result">
+    <div class="nav-bar">
+        <div class="logo">
+            <img style="height:80px; width: 150px" src ="{% static 'game/images/cricket-logo.png' %}">
+        </div>
+        <button class="about" onclick="open_about_page()">About</button>
+        <button class="contact" onclick="sendEmail()">Contact</button>
+    </div>
+    <h1 class="game-over-tag">GAME OVER!</h1>
+
+    <div class="result-container">
+        {% if first_batting == 'player' %}
+            <div class="team1-result-box">
+                {% if playerTeam == 'RCB' %}
+                    <img src="{% static 'game/team-logos/rcb.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'CSK' %}
+                    <img src="{% static 'game/team-logos/csk.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'MI' %}
+                    <img src="{% static 'game/team-logos/mi.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'GT' %}
+                    <img src="{% static 'game/team-logos/gt.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'LSG' %}
+                    <img src="{% static 'game/team-logos/lsg.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'KKR' %}
+                    <img src="{% static 'game/team-logos/kkr.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'SRH' %}
+                    <img src="{% static 'game/team-logos/srh.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'PBKS' %}
+                    <img src="{% static 'game/team-logos/pbks.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'DC' %}
+                    <img src="{% static 'game/team-logos/dc.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'RR' %}
+                    <img src="{% static 'game/team-logos/rr.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% endif %}
+                <div class="final-score">
+                    <h1>{{first_innings}}</h1>
+                </div>
+            </div>
+            <div class="team2-result-box">
+                {% if oppoTeam == 'RCB' %}
+                    <img src="{% static 'game/team-logos/rcb.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'CSK' %}
+                    <img src="{% static 'game/team-logos/csk.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'MI' %}
+                    <img src="{% static 'game/team-logos/mi.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'GT' %}
+                    <img src="{% static 'game/team-logos/gt.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'LSG' %}
+                    <img src="{% static 'game/team-logos/lsg.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'KKR' %}
+                    <img src="{% static 'game/team-logos/kkr.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'SRH' %}
+                    <img src="{% static 'game/team-logos/srh.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'PBKS' %}
+                    <img src="{% static 'game/team-logos/pbks.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'DC' %}
+                    <img src="{% static 'game/team-logos/dc.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'RR' %}
+                    <img src="{% static 'game/team-logos/rr.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% endif %}
+                <div class="final-score">
+                    <h1>{{second_innings}}</h1>
+                </div>
+            </div>
+        {% else %}
+            <div class="team1-result-box">
+                {% if oppoTeam == 'RCB' %}
+                    <img src="{% static 'game/team-logos/rcb.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'CSK' %}
+                    <img src="{% static 'game/team-logos/csk.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'MI' %}
+                    <img src="{% static 'game/team-logos/mi.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'GT' %}
+                    <img src="{% static 'game/team-logos/gt.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'LSG' %}
+                    <img src="{% static 'game/team-logos/lsg.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'KKR' %}
+                    <img src="{% static 'game/team-logos/kkr.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'SRH' %}
+                    <img src="{% static 'game/team-logos/srh.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'PBKS' %}
+                    <img src="{% static 'game/team-logos/pbks.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'DC' %}
+                    <img src="{% static 'game/team-logos/dc.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif oppoTeam == 'RR' %}
+                    <img src="{% static 'game/team-logos/rr.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% endif %}
+                <div class="final-score">
+                    <h1>{{first_innings}}</h1>
+                </div>
+            </div>
+            <div class="team2-result-box">
+                {% if playerTeam == 'RCB' %}
+                    <img src="{% static 'game/team-logos/rcb.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'CSK' %}
+                    <img src="{% static 'game/team-logos/csk.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'MI' %}
+                    <img src="{% static 'game/team-logos/mi.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'GT' %}
+                    <img src="{% static 'game/team-logos/gt.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'LSG' %}
+                    <img src="{% static 'game/team-logos/lsg.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'KKR' %}
+                    <img src="{% static 'game/team-logos/kkr.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'SRH' %}
+                    <img src="{% static 'game/team-logos/srh.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'PBKS' %}
+                    <img src="{% static 'game/team-logos/pbks.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'DC' %}
+                    <img src="{% static 'game/team-logos/dc.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% elif playerTeam == 'RR' %}
+                    <img src="{% static 'game/team-logos/rr.png' %}" style="height:190px; width:220px; border-radius:10px">
+                {% endif %}
+                <div class="final-score">
+                    <h1>{{second_innings}}</h1>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    <div class="final-result">
+        {% if result == 'tie' %}
+            <h1>GAME TIED</h1>
+        {% elif result == 'player' %}
+            <h1>{{playerTeam}} WON THE GAME</h1>
+        {% else %}
+            <h1>{{oppoTeam}} WON THE GAME</h1>
+        {% endif %}
+    </div>
+</body>
+</html>

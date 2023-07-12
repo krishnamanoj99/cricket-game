@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'game/images/cricket-website-favicon-black.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'game/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <script src="{% static 'game/script.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body class="about-page">
+    <div class="nav-bar">
+        <div class="logo">
+            <img style="height:80px; width: 150px" src ="{% static 'game/images/cricket-logo.png' %}">
+        </div>
+        <button class="about" onclick="open_about_page()">About</button>
+        <button class="contact" onclick="sendEmail()">Contact</button>
+    </div>
+    <div class="about-game">
+        <h1>About Game</h1>
+        <p>
+            Classic Hand Cricket Game is a number guessing based Cricket Game for all the cricket enthusiasts over there. 
+            Many of us have played a game called Hand Cricket in our school days, where two players, one is presumed to be
+            bowling while the other is batting. Like the rock paper scissors game, here both the players signal their guessed 
+            number with their hand simultaneously, and when both the numbers match, the batter is said to be dismissed and 
+            else the batter would add up the number he put to his/her score. And when eventually the batter is dismissed, the 
+            roles are reversed and the other player now has to chase down the total to win the game, if not the first batter 
+            would be the winner!.
+            <br>
+            <br>
+            So this game is made in such a way that, the computer would be the other player and plays optimally, it keeps guessing 
+            a random number out of 1 to 6 just like the player playing, giving us the experience of playing the original hand 
+            cricket game. 
+        </p>
+    </div>
+    <div class="about-creator">
+        <h1>About Creator</h1>
+        <p>
+            Hey there! hope you are enjoying the game. This is Krishna Manoj, 3<sup>rd</sup> year BTech Undergraduate from NIT Warangal. 
+            I have always been passionate about Cricket. Played a lot of cricket games online and also on mobile. But I have never come 
+            across a cricket game based on Hand Cricket, that almost everyone played in their school days. So, as soon as I learnt the 
+            tech stack to create a website, I decided to come up with a online hand cricket game. I would also be working on the game 
+            more and add a few more features like logging in and storing the results everytime a game is done and an option to share your 
+            achievements in social media platforms and a lot more. Till then, Happy Gaming!
+        </p>
+    </div>
+</body>
+</html>

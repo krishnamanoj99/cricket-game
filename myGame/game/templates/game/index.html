@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{% static 'game/images/cricket-website-favicon-black.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'game/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+    <script src="{% static 'game/script.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+</head>
+<body class="index">
+    <div class="nav-bar">
+        <div class="logo">
+            <img style="height:80px; width: 150px" src ="{% static 'game/images/cricket-logo.png' %}">
+        </div>
+        <button class="about" onclick="open_about_page()">About</button>
+        <button class="contact" onclick="sendEmail()">Contact</button>
+    </div>
+    <div class="heading">
+        <h1>CLASSIC HAND CRICKET</h1>
+    </div>
+
+    <div class="welcome">
+            Welcome to the Classic Hand Cricket Game!
+            <br>
+            Enter your Details to start playing!
+            <br>
+            <br>
+            <form method="post" action="{% url 'store_data' %}">
+                {% csrf_token %}
+                <label for="playerName">Enter your Name : </label>
+                <input class="textbox" id="playerName" value="" name="playerName">
+                <br>
+                <br>
+
+                Choose your Team : <select class="textbox" id="playerTeam" name="playerTeam">
+                    <option value="CSK">CSK</option>
+                    <option value="MI">MI</option>
+                    <option value="GT">GT</option>
+                    <option value="LSG">LSG</option>
+                    <option value="RCB">RCB</option>
+                    <option value="KKR">KKR</option>
+                    <option value="RR">RR</option>
+                    <option value="SRH">SRH</option>
+                    <option value="PBKS">PBKS</option>
+                    <option value="DC">DC</option>
+                </select>
+                <br>
+                <br>
+                Choose your opponent's Team : <select class="textbox" id="opponentTeam" name="opponentTeam">
+                    <option value="CSK">CSK</option>
+                    <option value="MI">MI</option>
+                    <option value="GT">GT</option>
+                    <option value="LSG">LSG</option>
+                    <option value="RCB">RCB</option>
+                    <option value="KKR">KKR</option>
+                    <option value="RR">RR</option>
+                    <option value="SRH">SRH</option>
+                    <option value="PBKS">PBKS</option>
+                    <option value="DC">DC</option>
+                </select>
+                <br>
+                <br>
+                <div class = "buttons">
+                    <button type="submit" class="lets-play" onclick="getInfo()">Let's Play</button>
+                    <button type="reset" class="reset-info" onclick="resetInfo()">Reset</button>
+                </div>
+            </form>
+    </div>
+    
+</body>
+</html>

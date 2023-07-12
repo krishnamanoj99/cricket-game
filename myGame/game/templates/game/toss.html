@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{% static 'game/images/cricket-website-favicon-black.png' %}" type="image/x-icon">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'game/styles.css' %}">
+    <script src="{% static 'game/script.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toss</title>
+</head>
+<body class="toss">
+    <div class="nav-bar">
+        <div class="logo">
+            <img style="height:80px; width: 150px" src ="{% static 'game/images/cricket-logo.png' %}">
+        </div>
+        <button class="about" onclick="open_about_page()">About</button>
+        <button class="contact" onclick="sendEmail()">Contact</button>
+    </div>
+    <h1 class="toss-header">TOSS TIME!</h1>
+        <div class="toss-time" id="toss-time">
+            <div class="head-tail-container" id="head-tail-container">
+                <button type="button" class="head" id="head" value="heads" onclick="toss()">HEADS</button>
+                <button type="button" class="tail" id="tail" value="tails" onclick="toss()">TAILS</button>
+            </div>
+        </div>
+</body>
+</html>

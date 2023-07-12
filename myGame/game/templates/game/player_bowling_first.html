@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="{% static 'game/images/cricket-website-favicon-black.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'game/styles.css' %}">
+    <script src="{% static 'game/script.js' %}"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="gameplay">
+    <div class="nav-bar">
+        <div class="logo">
+            <img style="height:80px; width: 150px" src ="{% static 'game/images/cricket-logo.png' %}">
+        </div>
+        <button class="about" onclick="open_about_page()">About</button>
+        <button class="contact" onclick="sendEmail()">Contact</button>
+    </div>
+    <div class="header">
+        <h1 class="header1">FIRST INNINGS</h1>
+        <h1 class="header2">YOUR TEAM IS BOWLING NOW</h1>
+    </div>
+
+    <div class="sc-inp-container">
+        <div class="scoreboard">
+            <h2 class="scorecard">SCORECARD</h2>
+            <h1 class="team-name">{{oppoTeam}}</h1>
+            <h1 class="score" id="score">0</h1>
+        </div>
+
+        <div class="player-Inputs">
+            <div>
+                <button class="inp-btn" onclick="bowling_first_game_play(1)">1</button>
+                <button class="inp-btn" onclick="bowling_first_game_play(2)">2</button>
+            </div>
+            <div>
+                <button class="inp-btn" onclick="bowling_first_game_play(3)">3</button>
+                <button class="inp-btn" onclick="bowling_first_game_play(4)">4</button>
+            </div>
+            <div>
+                <button class="inp-btn" onclick="bowling_first_game_play(5)">5</button>
+                <button class="inp-btn" onclick="bowling_first_game_play(6)">6</button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'game/images/cricket-website-favicon-black.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'game/styles.css' %}">
+    <script src="{% static 'game/script.js' %}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules</title>
+</head>
+<body class="rules">
+    <div class="nav-bar">
+        <div class="logo">
+            <img style="height:80px; width: 150px" src ="{% static 'game/images/cricket-logo.png' %}">
+        </div>
+        <button class="about" onclick="open_about_page()">About</button>
+        <button class="contact" onclick="sendEmail()">Contact</button>
+    </div>
+    <div class="rules-box">
+        <h2>RULES: </h2>
+        <ul>
+            <li>Game starts with the toss, whoever wins the toss has to chose either to bat or bowl first.</li>
+            <li>This is a guess based cricket game, when batting or bowling, player has to guess a number between 1 to 6.</li>
+            <li>Computer also guesses a number, if the player's & computer's guess matches, the batting team loses it's wicket.</li>
+            <li>First batting team would bat till they get dismissed and their score is the target.</li>
+            <li>Second batting team would have to chase down the target set to win else the first batting team is declared winner.</li>
+            <li>If the scores are level and second batting team is dismissed, game is declared a Tie.</li>
+        </ul>
+    </div>
+    <div class="teams-container">
+        <div class="team1-box">
+            {% if playerTeam == 'RCB' %}
+                <img src="{% static 'game/team-logos/rcb.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif playerTeam == 'CSK' %}
+                <img src="{% static 'game/team-logos/csk.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif playerTeam == 'MI' %}
+                <img src="{% static 'game/team-logos/mi.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif playerTeam == 'GT' %}
+                <img src="{% static 'game/team-logos/gt.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif playerTeam == 'LSG' %}
+                <img src="{% static 'game/team-logos/lsg.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif playerTeam == 'KKR' %}
+                <img src="{% static 'game/team-logos/kkr.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif playerTeam == 'SRH' %}
+                <img src="{% static 'game/team-logos/srh.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif playerTeam == 'PBKS' %}
+                <img src="{% static 'game/team-logos/pbks.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif playerTeam == 'DC' %}
+                <img src="{% static 'game/team-logos/dc.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif playerTeam == 'RR' %}
+                <img src="{% static 'game/team-logos/rr.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% endif %}
+
+            <h3>{{player_name}}'s Team</h3>
+        </div>
+        <div class="team2-box">
+            {% if oppoTeam == 'RCB' %}
+                <img src="{% static 'game/team-logos/rcb.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif oppoTeam == 'CSK' %}
+                <img src="{% static 'game/team-logos/csk.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif oppoTeam == 'MI' %}
+                <img src="{% static 'game/team-logos/mi.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif oppoTeam == 'GT' %}
+                <img src="{% static 'game/team-logos/gt.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif oppoTeam == 'LSG' %}
+                <img src="{% static 'game/team-logos/lsg.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif oppoTeam == 'KKR' %}
+                <img src="{% static 'game/team-logos/kkr.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif oppoTeam == 'SRH' %}
+                <img src="{% static 'game/team-logos/srh.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif oppoTeam == 'PBKS' %}
+                <img src="{% static 'game/team-logos/pbks.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif oppoTeam == 'DC' %}
+                <img src="{% static 'game/team-logos/dc.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% elif oppoTeam == 'RR' %}
+                <img src="{% static 'game/team-logos/rr.png' %}" style="height:190px; width:220px; border-radius:10px">
+            {% endif %}
+            <h3>Computer's Team</h3>
+        </div>
+    </div>
+    <form method='POST' action="{%url 'rules_view' %}">
+        {% csrf_token %}
+        <button class="start-game-button" onclick="startGame()">Start Game</button>
+    </form>
+</body>
+</html>

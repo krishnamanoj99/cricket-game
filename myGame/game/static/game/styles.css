@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+}
+
+.about-page{
+    background-color: #228B22;
+
+}
+.about-game{
+    margin-top: 50px;
+    display: block;
+    width: 1000px;
+    margin-left: 30px;
+    margin-right: auto;
+    background-color: bisque;
+    border-radius: 15px;
+    box-shadow: 3px 3px 4px 4px #181a1c;
+    padding: 15px;
+}
+.about-creator{
+    margin-top: 50px;
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: 30px;
+    background-color: bisque;
+    box-shadow: 3px 3px 4px 4px #181a1c;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+
+.logo{
+    margin-left: 120px;
+}
+.nav-bar{
+    height: 80px;
+    background-color: rgb(47, 47, 47);
+    display: flex;
+    border-bottom-width: 0;
+}
+.about{
+    margin-top: auto;
+    height: 80px;
+    margin-left: auto;
+    margin-right: 120px;
+    width: 140px;
+    font-size: 20px;
+    background-color: rgb(47, 47, 47);
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-color: rgb(47, 47, 47);
+    border-bottom-width: 0;
+    color: white;
+    cursor: pointer;
+}
+.about:hover{
+    border-bottom-width: 8px;
+    border-bottom-color: rgb(0, 255, 0);
+}
+.contact{
+    margin-top: auto;
+    height: 80px;
+    margin-right: 150px;
+    width: 140px;
+    font-size: 20px;
+    background-color: rgb(47, 47, 47);
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-color: rgb(47, 47, 47);
+    border-bottom-width: 0;
+    color: white;
+    cursor: pointer;
+}
+.contact:hover{
+    border-bottom-width: 8px;
+    border-bottom-color: rgb(0, 255, 0);
+}
+
+.index{
+    background-image: url("bgm.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.heading{
+    margin-top: 5%;
+    margin-left: 100px;
+    margin-right: auto;
+    width: 50%;
+    color: white;
+    font-size: x-large;
+}
+
+.welcome{
+    font-size: x-large;
+    width :50%;
+    display: block;
+    margin-top: 80px;
+    margin-left: 170px;
+    margin-right: auto;
+    color: white;
+}
+
+.textbox{
+    /* display: block; */
+    padding: 5px;
+    border-radius: 9px;
+    border: 0;
+    width: auto;
+    font-size: large;
+    background-color: white;
+}
+
+.buttons{
+    display: flex;
+    margin-left : 80px;
+}
+
+.lets-play, .reset-info{
+    width: 180px;
+    border: 0;
+    border-radius: 12px;
+    background-color: white;
+    padding : 15px;
+    font-size: 25px;
+    margin-right : 70px;
+}
+.lets-play:hover{
+    transform: scale(1.1);
+}
+.reset-info:hover{
+    transform: scale(1.1);
+}
+
+
+/* RULES */
+.rules{
+    background-image: url("start_bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+.teams-container{
+    display: flex;
+    margin-top: 30px;
+}
+
+.rules-box{
+    font-size: 18px;
+    color: white;
+    width: 1400px;
+    height: 220px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.team1-box{
+    margin-left: 350px;
+    margin-top: 20px;
+    width: 220px;
+    height: 220px;
+    color: white;
+}
+.team2-box{
+    display: inline-block;
+    margin-left: 400px;
+    margin-top: 20px;
+    width: 220px;
+    height: 220px;
+    color: white;
+}
+.start-game-button{
+    margin-top : 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    border-radius: 12px;
+    background-color: white;
+    padding : 15px;
+    font-size: 25px;
+}
+.start-game-button:hover{
+    transform: scale(1.1);
+}
+
+/* TOSS */
+.toss{
+    background-image: url(toss_bg.jpg);
+    background-size: cover;
+}
+.toss-header{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+    height: 55px;
+    font-size: 50px;
+}
+.head-tail-container{
+    margin-top: 500px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.toss-outcome-div{
+    font-size: 30px;
+    margin-top: 500px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.head, .tail{
+    display: inline-block;
+    width: 300px;
+    height: 80px;
+    border-style: hidden;
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    box-shadow: 10px 10px;
+}
+
+.head:hover{
+    background-color: grey;
+}
+.tail:hover{
+    background-color: grey;
+}
+
+/* GAME-PLAY */
+.gameplay{
+    height: 100%;
+    margin: 0;
+    background-image: url(game_play.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header{
+    margin-top: 60px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    color:black;
+    background-color: rgb(216, 216, 216);
+    border-radius: 10px;
+    width: 900px;
+}
+.header1{
+    margin-left: 20px;
+    margin-right: auto;
+}
+.header2{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+
+.sc-inp-container{
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    height: 350px;
+}
+.scoreboard{
+    border-radius: 20px;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width : 400px;
+    height: 160px;
+}
+.scorecard{
+    display: block;
+    margin-top: 0;
+    margin-left: 30px;
+    margin-right: auto;
+    width : 10px;
+}
+.team-name{
+    display: block;
+    margin-top: 70px;
+    margin-left: 5px;
+    margin-right: auto;
+    width : 300px;
+}
+.score{
+    margin-top: 70px;
+    display: block;
+    margin-left: 55px;
+    margin-right: auto;
+    width : 100px;
+}
+
+.player-Inputs{
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width : 300px
+}
+.inp-btn{
+    width : 120px;
+    height : 50px;
+    margin: 5px;
+    border-style: hidden;
+    font-size: x-large;
+    box-shadow: 2px 2px;
+    border-radius: 10px;
+    background-color: rgb(217, 217, 217);
+}
+.inp-btn:hover{
+    background-color: rgb(142, 237, 142);
+}
+
+.target-card{
+    display: flex;
+    border-radius: 20px;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width : 400px;
+    height: 160px;
+}
+
+.target-name-card{
+    margin-top: 55px;
+    margin-left: 30px;
+}
+#target-tag{
+    margin-left: auto;
+    margin-right: 30px;
+    margin-top: 55px;
+}
+
+.result{
+    background-image: url(result_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.game-over-tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    color: whitesmoke;
+    /* font-family; */
+    font-stretch:wider;
+    font-size: 50px;
+}
+
+.result-container{
+    height: 300px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*background-color: white;*/
+}
+
+.team1-result-box{
+    width: 220px;
+    height: 250px;
+    margin-right: 70px;
+    border-radius: 15px;
+}
+.team2-result-box{
+    width: 220px;
+    height: 250px;
+    margin-left: 70px;
+    border-radius: 15px;
+}
+.final-score{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    border-radius: 10px;
+}
+.final-result{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    align-items: center;
+    border-radius: 15px;
+}
+
